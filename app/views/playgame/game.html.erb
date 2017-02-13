@@ -1,0 +1,18 @@
+<h1>Playgame#game</h1>
+<!-- <p>Find me in app/views/playgame/game.html.erb</p> -->
+
+<p>******** Welcome to the longest word-game !********</p>
+<p>Here is your grid :</p>
+<%= @grid.join(" ") %>
+<p>*****************************************************</p>
+
+<form action="/score">
+  <input type="text" value="<%= @grid.join %>" name="grid">
+  <input type="text" value="<%= @start_time %>" name="start_time">
+  <label for="question">What's your best shot ?</label>
+  <input type="text" id="attempt" name="attempt" placeholder="your best shot">
+  <input type="submit">
+</form>
+
+
+
